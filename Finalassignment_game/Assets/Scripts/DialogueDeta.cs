@@ -1,16 +1,16 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 
 namespace YIZU
 {
     /// <summary>
-    /// ¹ï¸Ü¸ê®Æ
+    /// å°è©±è³‡æ–™
     /// </summary>
-    [CreateAssetMenu(menuName = "YIZU/Dialogue Data", fileName = "New Dialogue Data")] //«Ø¥ß¯À§÷¿ï³æ
+    [CreateAssetMenu(menuName = "YIZU/Dialogue Data", fileName = "New Dialogue Data")] //å»ºç«‹ç´ æé¸å–®
     public class DialogueDeta : ScriptableObject
     {
-        [Header("¹ï¸ÜªÌ¦WºÙ")]
+        [Header("å°è©±è€…åç¨±")]
         public string dialogueName;
-        [Header("¹ï¸ÜªÌ¤º®e"), TextArea(2, 10)]
+        [Header("å°è©±è€…å…§å®¹"), TextArea(2, 10)]
         public string[] dialogueContents;
     }
 }

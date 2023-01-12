@@ -1,23 +1,23 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 using UnityEngine.Events;
 
 namespace YIZU
 {
     /// <summary>
-    /// ¤¬°Ê¨t²Î
+    /// äº’å‹•ç³»çµ±
     /// </summary>
     public class InterableSystem : MonoBehaviour
     {
-        [SerializeField, Header("²Ä¤@¦¸¹ï¸Ü¸ê®Æ")]
+        [SerializeField, Header("ç¬¬ä¸€æ¬¡å°è©±è³‡æ–™")]
         private DialogueDeta dialogueDeta;
-        [SerializeField, Header("¹ï¸Üµ²§ô«á¨Æ¥ó")]
+        [SerializeField, Header("å°è©±çµæŸå¾Œäº‹ä»¶")]
         private UnityEvent onDiaFinish;
 
-        [SerializeField, Header("±Ò°Ê¹D¨ã")]
+        [SerializeField, Header("å•Ÿå‹•é“å…·")]
         private GameObject propAct;
-        [SerializeField, Header("±Ò°Ê«á¹ï¸Ü")]
+        [SerializeField, Header("å•Ÿå‹•å¾Œå°è©±")]
         private DialogueDeta dataDiaAct;
-        [SerializeField, Header("±Ò°Ê«á¹ï¸Üµ²§ô«á¨Æ¥ó")]
+        [SerializeField, Header("å•Ÿå‹•å¾Œå°è©±çµæŸå¾Œäº‹ä»¶")]
         private UnityEvent onDiaFinAfterAct;
 
         private string nameTarget = "PlayerCapsule";
@@ -25,7 +25,7 @@ namespace YIZU
 
         private void Awake()
         {
-            dialogueSystem = GameObject.Find("µe¥¬¹ï¸Ü¨t²Î").GetComponent<DialogueSystem>();
+            dialogueSystem = GameObject.Find("ç•«å¸ƒå°è©±ç³»çµ±").GetComponent<DialogueSystem>();
         }
 
 

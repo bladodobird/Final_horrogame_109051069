@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using UnityEngine;
 
 namespace YIZU
@@ -6,7 +6,7 @@ namespace YIZU
 
     public class Coroutine : MonoBehaviour
     {
-        private string testDialogue = "´ú¸Õ123";
+        private string testDialogue = "æ¸¬è©¦123";
 
 
 

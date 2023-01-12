@@ -1,4 +1,4 @@
-using TMPro;
+ï»¿using TMPro;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -7,24 +7,24 @@ using UnityEngine.Events;
 namespace YIZU
 {
     /// <summary>
-    /// ¹ï¸Ü¨t²Î
+    /// å°è©±ç³»çµ±
     /// </summary>
     public class DialogueSystem : MonoBehaviour
     {
-        #region ¸ê®Æ°Ï
-        [SerializeField, Header("¹ï¸Ü¶¡¹j"), Range(0, 0.5f)] //§Ú§Ñ°ORange¥Î¦b­ş
-        private float diaIntervalTime = 0.1f; //¹ï¸Ü¶¡¹j®É¶¡
-        [SerializeField, Header("¶}ÀY¹ï¸Ü")]
+        #region è³‡æ–™å€
+        [SerializeField, Header("å°è©±é–“éš”"), Range(0, 0.5f)] //æˆ‘å¿˜è¨˜Rangeç”¨åœ¨å“ª
+        private float diaIntervalTime = 0.1f; //å°è©±é–“éš”æ™‚é–“
+        [SerializeField, Header("é–‹é ­å°è©±")]
         private DialogueDeta diaOpening;
-        [SerializeField, Header("¹ï¸Ü«öÁä")]
+        [SerializeField, Header("å°è©±æŒ‰éµ")]
         private KeyCode dialogueKey = KeyCode.Space;
 
-        private WaitForSeconds diaInterval => new WaitForSeconds(diaIntervalTime); //¹ï¸Ü¥X²{?
+        private WaitForSeconds diaInterval => new WaitForSeconds(diaIntervalTime); //å°è©±å‡ºç¾?
 
-        private CanvasGroup groupDialogue; //¨t²Î¸s²Õ
-        private TextMeshProUGUI textName; //¹ï¸ÜªÌ¦WºÙ
-        private TextMeshProUGUI textContent; //¹ï¸Ü¤º®e
-        private GameObject tri; //¹ï¸Ü¹Ï¥Ü¡A¥X²{»P§_¥ÎgameObject; 
+        private CanvasGroup groupDialogue; //ç³»çµ±ç¾¤çµ„
+        private TextMeshProUGUI textName; //å°è©±è€…åç¨±
+        private TextMeshProUGUI textContent; //å°è©±å…§å®¹
+        private GameObject tri; //å°è©±åœ–ç¤ºï¼Œå‡ºç¾èˆ‡å¦ç”¨gameObject; 
         #endregion
 
         private PlayerInput playerInput;
@@ -32,10 +32,10 @@ namespace YIZU
 
         private void Awake()
         {
-            groupDialogue = GameObject.Find("µe¥¬¹ï¸Ü¨t²Î").GetComponent<CanvasGroup>();
-            textName = GameObject.Find("¹ï¸ÜªÌ¦WºÙ").GetComponent<TextMeshProUGUI>();
-            textContent = GameObject.Find("¹ï¸Ü¤º®e").GetComponent<TextMeshProUGUI>();
-            tri = GameObject.Find("¹ï¸Ü®Ø§¹¦¨¹Ï¥Ü");
+            groupDialogue = GameObject.Find("ç•«å¸ƒå°è©±ç³»çµ±").GetComponent<CanvasGroup>();
+            textName = GameObject.Find("å°è©±è€…åç¨±").GetComponent<TextMeshProUGUI>();
+            textContent = GameObject.Find("å°è©±å…§å®¹").GetComponent<TextMeshProUGUI>();
+            tri = GameObject.Find("å°è©±æ¡†å®Œæˆåœ–ç¤º");
             tri.SetActive(false);
 
             playerInput = GameObject.Find("PlayerCapsule").GetComponent<PlayerInput>();
@@ -45,7 +45,7 @@ namespace YIZU
         }
 
         /// <summary>
-        /// ¶}©l¹ï¸Ü
+        /// é–‹å§‹å°è©±
         /// </summary>
         /// <param name="deta"></param>
         /// <param name="_onDiaFinish"></param>
@@ -93,7 +93,7 @@ namespace YIZU
                     yield return null;
                 }
 
-                print("<color=#993300>«ö¤U«ö¶s</color>");
+                print("<color=#993300>æŒ‰ä¸‹æŒ‰éˆ•</color>");
             }
 
             StartCoroutine(FadeGroup(false));
